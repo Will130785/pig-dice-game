@@ -39,7 +39,7 @@ diceRoll = () => {
     roll = Math.floor(Math.random() * 6) + 1;
 
     //Display correct dice onscrean
-    dice.src = `/img/dice-${roll}.png`;
+    dice.src = `img/dice-${roll}.png`;
     dice.style.display = "block";
 };
 
