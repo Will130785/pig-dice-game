@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig | Dice Game</title>
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <!-- Overall game container-->
+    <div class="game-container">
+
+        <!-- Player 1 container -->
+        <div class="container-p0 active">
+            <!-- Player one name -->
+            <div class="name-p0">
+                <h2 class="p0">Player 1</h2>
+            </div>
+
+            <!-- Player 1 overall score -->
+            <div class="overall-p0">
+                0
+            </div>
+
+            <!-- Player 1 current score-->
+            <div class="current-p0">
+                <h3>Current</h3>
+                <p class="current-score-p0">0</p>
+            </div>
+        </div>
+
+
+        <!-- Player 2 container -->
+        <div class="container-p1">
+            <!-- Player one name -->
+            <div class="name-p1">
+                <h2 class="p1">Player 2</h2>
+            </div>
+
+            <!-- Player 2 overall score -->
+            <div class="overall-p1">
+                0
+            </div>
+
+            <!-- Player 2 current score-->
+            <div class="current-p1">
+                <h3>Current</h3>
+                <p class="current-score-p1">0</p>
+            </div>
+        </div>
+
+        <!-- Game play container -->
+        <div class="gameplay">
+            <span class="new-game">New Game</span>
+            <span class="roll-dice">Roll Dice</span>
+            <span class="hold-score">Hold Score</span>
+            <img class="dice" src="/img/dice-1.png">
+            <input class="play-to" type="number" placeholder="Play to">
+        </div>
+     
+    </div>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,255 @@
+/*Import font*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+/*Global reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Set font size to 62.5% = 10px*/
+html {
+    font-size: 62.5%;
+}
+
+/*Media query for text size at different device screen dimentions*/
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 35%;
+    }
+}
+
+/*Set overall font and color*/
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: rgb(148, 0, 0)
+}
+
+/*Overall game container*/
+.game-container {
+    /*Set grid*/
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 33.33vh);
+}
+
+/*Player one container*/
+.container-p0 {
+    /*Set grid position*/
+    grid-row: 1 / -1;
+    grid-column: 1 / 7;
+
+    /*Set grid*/
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+/*Player one name*/
+.name-p0 {
+    /*Set grid postion*/
+    grid-row: 2 / 3;
+    grid-column: 3 / 7;
+    text-align: center;
+
+    font-size: 3rem;
+}
+
+/*Player one overall score*/
+.overall-p0 {
+    /*Set grid position*/
+    grid-row: 3 / 4;
+    grid-column: 3 / 7;
+    text-align: center;
+
+    font-size: 5rem;
+}
+
+/*Player one current score container*/
+.current-p0 {
+    /*Set grid position*/
+    grid-row: 5 / 6;
+    grid-column: 3 / 7;
+    text-align: center;
+
+    font-size: 1.8rem;
+}
+
+/*Player one current score*/
+.current-score-p0 {
+    font-size: 4rem;
+}
+
+/*Player two container*/
+.container-p1 {
+    /*Set grid position*/
+    grid-row: 1 / -1;
+    grid-column: 7 / -1;
+
+    /*Set grid*/
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+/*Player two name*/
+.name-p1 {
+    /*Set grid position*/
+    grid-row: 2 / 3;
+    grid-column: 5 / 10;
+    text-align: center;
+
+    font-size: 3rem;
+}
+
+/*Player two overall score*/
+.overall-p1 {
+    /*Set grid position*/
+    grid-row: 3 / 4;
+    grid-column: 5 / 10;
+    text-align: center;
+
+    font-size: 5rem;
+}
+
+/*Player two current score container*/
+.current-p1 {
+    /*Set grid position*/
+    grid-row: 5 / 6;
+    grid-column: 5 / 10;
+    text-align: center;
+
+    font-size: 1.8rem;
+}
+
+/*Player two current score*/
+.current-score-p1 {
+    font-size: 4rem;
+}
+
+/*Gameplay option container*/
+.gameplay {
+    /*Set grid postion*/
+    grid-row: 1 / -1;
+    grid-column: 5 / 9;
+
+    /*Set grid*/
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 2rem;
+    padding: 2rem 0;
+}
+
+/*New game button*/
+.new-game {
+    /*Set grid position*/
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    text-align: center;
+
+    font-size: 1.4rem;
+    cursor: pointer;
+    /*Set animation transition*/
+    transition: all .2s ease-in-out;
+}
+
+/*New button hover behaviour*/
+.new-game:hover {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/*Roll dice button*/
+.roll-dice {
+    /*Set grid position*/
+    grid-row: 9 / 10;
+    text-align: center;
+    grid-column: 1 / -1;
+
+    font-size: 1.4rem;
+    cursor: pointer;
+    /*Set animation transition*/
+    transition: all .2s ease-in-out;
+}
+
+/*Roll dice button hover behaviour*/
+.roll-dice:hover {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/*Hold score button*/
+.hold-score {
+    /*Set grid position*/
+    grid-row: 10 / 11;
+    text-align: center;
+    grid-column: 1 / -1;
+
+    font-size: 1.4rem;
+    cursor: pointer;
+    /*Set animation transition*/
+    transition: all .2s ease-in-out;
+}
+
+/*Set hold score button hover behaviour*/
+.hold-score:hover {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/*Set dice image properties*/
+.dice {
+    height: 10rem;
+    width: 10rem;
+    grid-row: 4 / 9;
+    text-align: center;
+    grid-column: 6 / 8;
+}
+
+/*Play to input styling*/
+.play-to {
+    grid-row: 11 / 12;
+    text-align: center;
+    grid-column: 1 / -1;
+
+    font-size: 1.4rem;
+    padding: .5rem;
+}
+
+/*Active player class*/
+.active {
+    background-color: rgba(235, 160, 0, 0.6);
+}
+
+/*Winner class*/
+.winner {
+    background-color: rgba(0, 128, 0, 0.6);
+}
